@@ -392,7 +392,16 @@
 
         // --- 1. KHỞI TẠO FIREBASE ---
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'empty-personal-blog-vn';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDjGIYICQagsp0rfltJUuN6RNX8T_Uh0uk",
+  authDomain: "bokhongnao.firebaseapp.com",
+  projectId: "bokhongnao",
+  storageBucket: "bokhongnao.firebasestorage.app",
+  messagingSenderId: "1073031179382",
+  appId: "1:1073031179382:web:b9551e4aac2911aaa3c357",
+  measurementId: "G-F1Y7SETEQQ"
+};
 
         let app, auth, db;
         let currentUser = null;
